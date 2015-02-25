@@ -1,0 +1,36 @@
+﻿<div ng-init="getDiscoveryResource()">
+    <h2 align="CENTER">{{loadingMessage}}</h2>
+    <p></p>
+    <table id="FilesResultsTable" width='100%'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="file in model">
+                <td>{{file.name}}</td>
+                <td>{{file.type}}</td>
+                <td>
+                    | <a ng-click="deleteFile(file)">Delete</a>
+                    | <a ng-click="getProperties(file)">Properties</a>
+                    | <a ng-click="viewContent(file)" ng-if="file.type == 'File' && file.name.indexOf('.txt') > -1">View</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <br />
+        <div>
+            <p ng-if="fileResult.name == undefined">{{fileResult}}</p>
+            <p ng-if="fileResult.name !== undefined">Name: {{fileResult.name}}</p>
+            <p ng-if="fileResult.size !== undefined">Size: {{fileResult.size}}</p>
+            <p ng-if="fileResult.dateTimeCreated !== undefined">dateTimeCreated: {{fileResult.dateTimeCreated}}</p>
+            <p ng-if="fileResult.dateTimeLastModified !== undefined">dateTimeLastModified: {{fileResult.dateTimeLastModified}}</p>
+            <a ng-if="fileResult.webUrl !== undefined" href="{{fileResult.webUrl}}" target="_blank">webUrl: {{fileResult.webUrl}}</a>
+        </div>
+        <p ng-if="fileResult == undefined">Select a .txt file to view its content</p>
+    </div>
+</div>
