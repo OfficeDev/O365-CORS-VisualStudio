@@ -12,9 +12,8 @@ namespace Office365CORS
             app.UseWindowsAzureActiveDirectoryBearerAuthentication(
                 new WindowsAzureActiveDirectoryBearerAuthenticationOptions
                 {
-                    Audience = SettingsHelper.ClientId,// ConfigurationManager.AppSettings["ida:ClientID"],
-                    Tenant = SettingsHelper.Tenant, //ConfigurationManager.AppSettings["ida:Tenant"],
-                    MetadataAddress = "https://login.windows-ppe.net/cbe307ce-324e-43ed-85e6-b4e11629e516/federationmetadata/2007-06/federationmetadata.xml",
+                    Audience = SettingsHelper.ClientId,
+                    Tenant = SettingsHelper.Tenant,
                     TokenValidationParameters = new TokenValidationParameters { SaveSigninToken = true }
                 });
         }

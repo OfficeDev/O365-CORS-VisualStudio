@@ -29,8 +29,8 @@
             <p ng-if="fileResult.size !== undefined">Size: {{fileResult.size}}</p>
             <p ng-if="fileResult.dateTimeCreated !== undefined">dateTimeCreated: {{fileResult.dateTimeCreated}}</p>
             <p ng-if="fileResult.dateTimeLastModified !== undefined">dateTimeLastModified: {{fileResult.dateTimeLastModified}}</p>
-            <a ng-if="fileResult.webUrl !== undefined" href="{{fileResult.webUrl}}" target="_blank">webUrl: {{fileResult.webUrl}}</a>
+            <p ng-if="fileResult.webUrl !== undefined" style="display:inline">webUrl: </p>
+            <a ng-if="fileResult.webUrl !== undefined" href="{{fileResult.webUrl}}" target="_blank">{{fileResult.webUrl}}</a>
         </div>
-        <p ng-if="fileResult == undefined">Select a .txt file to view its content</p>
     </div>
 </div>

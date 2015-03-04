@@ -9,11 +9,11 @@ namespace Office365CORS
         private static string _appKey = ConfigurationManager.AppSettings["ida:AppKey"] ?? ConfigurationManager.AppSettings["ida:Password"];
         private static string _tenant = ConfigurationManager.AppSettings["ida:Tenant"];
 
-        private static string _authorizationUri = "https://login.windows-ppe.net";
-        private static string _graphResourceId = "https://graph.ppe.windows.net";
-        private static string _authority = "https://login.windows-ppe.net/common/";
-        private static string _discoverySvcResourceId = "https://api.officeppe.com/discovery/";
-        private static string _discoverySvcEndpointUri = "https://api.officeppe.com/discovery/v1.0/me/";
+        private static string _authorizationUri = "https://login.windows.net";
+        private static string _graphResourceId = "https://graph.windows.net";
+        private static string _authority = "https://login.windows.net/common/";
+        private static string _discoverySvcResourceId = "https://api.office.com/discovery/";
+        private static string _discoverySvcEndpointUri = "https://api.office.com/discovery/v1.0/me/";
 
         public static string Tenant
         {

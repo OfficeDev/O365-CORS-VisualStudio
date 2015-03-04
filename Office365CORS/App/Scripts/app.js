@@ -16,9 +16,7 @@ angular.module('O365CorsAngularADAL', ['ngRoute', 'AdalAngular'])
 
     adalProvider.init(
         {
-            tenant: 'rohiagra.ccsctp.net',
-            clientId: 'ddac6a49-6f7c-40df-954e-971d6aedfe83',
-            instance: 'https://login.windows-ppe.net/'
+            clientId: 'acfac45e-85de-4f94-ace2-c9a95d38f505'
         },
         $httpProvider
         );
