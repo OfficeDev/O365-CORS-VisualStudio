@@ -1,13 +1,11 @@
 ﻿using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Microsoft.Office365.Discovery;
 using Office365CORS.Models;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Http;
-using System.Linq;
-using System.Collections.Generic;
-using System.Web;
-using System.Configuration;
 
 namespace Office365CORS.Controllers
 {

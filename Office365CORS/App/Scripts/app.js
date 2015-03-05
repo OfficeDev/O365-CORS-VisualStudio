@@ -16,7 +16,7 @@ angular.module('O365CorsAngularADAL', ['ngRoute', 'AdalAngular'])
 
     adalProvider.init(
         {
-            clientId: 'acfac45e-85de-4f94-ace2-c9a95d38f505'
+            clientId: 'paste-your-ClientId-here'
         },
         $httpProvider
         );

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Owin.Security.ActiveDirectory;
 using Owin;
-using System.Configuration;
 using System.IdentityModel.Tokens;
 
 namespace Office365CORS
