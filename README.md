@@ -1,4 +1,4 @@
-# O365-CORS-VisualStudio
+# Office 365 CORS Single Page Application using VisualStudio
 This sample shows how to build a AngularJS Single Page Application using Visual Studio and ADAL for JavaScript to demonstrate the Office 365 CORS support.
 
 ADAL for Javascript is an open source library.  For distribution options, source code, and contributions, check out the ADAL JS repo at [https://github.com/AzureAD/azure-activedirectory-library-for-js](https://github.com/AzureAD/azure-activedirectory-library-for-js).
@@ -10,15 +10,22 @@ To run this sample, you need:
 2. [Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013)
 3. [Office 365 Developer Subscription](https://portal.office.com/Signup/Signup.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1)
 
-## Step 1: Clone or download this repository
-From your Git Shell or command line:
+## Step 1: Clone the application in Visual Studio
+Visual Studio 2013 supports connecting to Git servers. As the project templates are hosted in GitHub, Visual Studio 2013 makes it easier to clone projects from GitHub.
 
-`git clone https://github.com/OfficeDev/O365-CORS-VisualStudio.git`
+The steps below will describe how to clone Office 365 API web application project in Visual Studio from Office Developer GitHub.
+
+1. Open Visual Studio 2013.
+2. Switch to Team Explorer.
+3. Team Explorer provides options to clone Git repositories.
+4. Click Clone under Local Git Repositories, enter the clone URL **https://github.com/OfficeDev/O365-CORS-VisualStudio.git** for the web application project and click Clone.
+5. Once the project is cloned, double click on the repo.
+6. Double click the project solution which is available under Solutions.
+7. Switch to Solution Explorer.
 
 ## Step 2: Build the Project
-1. Open the project in Visual Studio 2013.
-2. Simply Build the project to restore NuGet packages.
-3. Ignore any build errors for now as we will configure the project in the next steps.
+1. Simply Build the project to restore NuGet packages.
+2. Ignore any build errors for now as we will configure the project in the next steps.
 
 ## Step 3: Configure the sample
 Once downloaded, open the sample in Visual Studio.
