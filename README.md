@@ -68,7 +68,7 @@ By default, applications provisioned in Azure AD are not enabled to use the OAut
 
 1. Log in to your Azure Portal and select your Office 365 domain directory.
 2. Click on the Applications tab.
-3. Search for Office365CORS.Office365App application by pasting the `ClientID` which was copied from web.config into the search box and select it from the results list. 
+3. Paste the `ClientID` which was copied from web.config into the search box and trigger search. Now select "Office365CORS.Office365App" application from the results list. 
 4. Using the Manage Manifest button in the drawer, download the manifest file for the application and save it to disk.
 5. Open the manifest file with a text editor. Search for the `oauth2AllowImplicitFlow` property. You will find that it is set to `false`; change it to `true` and save the file.
 6. Using the Manage Manifest button, upload the updated manifest file. Save the configuration of the app.
@@ -79,6 +79,23 @@ Clean the solution, rebuild the solution, and run it.
 You can trigger the sign in experience by either clicking on the Login link on the top right corner, or by clicking directly on the My Files tab. To see a list of files stored on OneDrive click on the My Files tab. To view the properties of a file or folder, click on the properties link displayed right next to the file name and the properties will be displayed at the bottom of MyFiles list.
 
 ## How To Deploy This Sample To Azure Website
+To deploy this sample application to azure website, we will first create a new website on Azure then import the publish profile
 
-Wait for it... Coming soon.
+1. Sign in to the [Azure management portal](https://manage.windowsazure.com).
+2. In the drawer, click **+New**.
+3. Select **Compute** -> **Website** -> **Quick Create**.
+4. Enter the URL, for example "Office365CORS" and from the web hosting plan either select an existing plan or create a new web hosting plan.
+5. Click **Create Website**.
+6. Once the website is created, select the newly created website and click on **Configure** tab.
+7. Scroll down to **Authentication / Authorization** and click Configure.
+8. On the "Configure Azure Wedsites Authentication / Authorization" dialog, select the **Directory** in which the sample app was registered and from the **AAD Application** drop down list, select "Office365CORS.Office365App (https://localhost:44304/)". Click **OK**.
+9. Once authentication / authorization configuration is completed, click on **Dashboard** tab.
+10. In the quick glance section, click **Download the publish profile** and save it to disk.
+11. Go back to Visual Studio, right click on "Office365CORS" project node in solution explorer and select **Publish**.
+12. Click **Import**.
+13. **Browse** to the publish profile that we saved to disk and click **OK**.
+14. In Connection tab, make sure that **Publish method** is "Web Deploy". Click **Next**.
+15. In Settings tab, **un-check** the **Enable Organizational Authentication** checkbox to disable it.
+16. Click **Publish**.
 
+The sample application will now be published to "[websiteURL].azurewebsites.net".
