@@ -23,7 +23,7 @@ The steps below will describe how to clone Office 365 API web application projec
 6. Double click the project solution which is available under Solutions.
 7. Switch to Solution Explorer.
 
-## Step 3: Configure the sample
+## Step 2: Configure the sample
 
 ### Build the Project
 Simply Build the project to restore NuGet packages.
@@ -68,7 +68,7 @@ To get the tenant Id of your Office 365 tenant:
 3. Open the file `App/Scripts/app.js` and locate the line `adalProvider.init(`.
 4. Replace the value of `clientId` with the ClientId from web.config.
 
-## Step 5: Enable the OAuth2 implicit grant for your application
+## Step 3: Enable the OAuth2 implicit grant for your application
 By default, applications provisioned in Azure AD are not enabled to use the OAuth2 implicit grant. In order to run this sample, you need to explicitly opt in.
 
 1. Log in to your Azure Portal and select your Office 365 domain directory.
@@ -78,7 +78,7 @@ By default, applications provisioned in Azure AD are not enabled to use the OAut
 5. Open the manifest file with a text editor. Search for the `oauth2AllowImplicitFlow` property. You will find that it is set to `false`; change it to `true` and save the file.
 6. Using the Manage Manifest button, upload the updated manifest file. Save the configuration of the app.
 
-## Step 6: Run the sample
+## Step 4: Run the sample
 Clean the solution, rebuild the solution, and run it.
 
 In the **Debug Toolbar**, select to run with **Google Chrome** instead of **Internet Explorer**.
@@ -87,7 +87,7 @@ In the **Debug Toolbar**, select to run with **Google Chrome** instead of **Inte
 
 You can trigger the sign in experience by either clicking on the Login link on the top right corner, or by clicking directly on the My Files tab. To see a list of files stored on OneDrive click on the My Files tab. To view the properties of a file or folder, click on the properties link displayed right next to the file name and the properties will be displayed at the bottom of MyFiles list.
 
-## Step 7: Deploy This Sample To Azure Website
+## Step 5: Deploy This Sample To Azure Website
 To deploy this sample application to azure website, we will first create a new website on Azure then import the publish profile
 
 1. Sign in to the [Azure management portal](https://manage.windowsazure.com).
