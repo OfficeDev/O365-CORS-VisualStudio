@@ -22,8 +22,8 @@ namespace Office365CORS
     public class SettingsHelper
     {
         private static string _clientId = ConfigurationManager.AppSettings["ida:ClientId"] ?? ConfigurationManager.AppSettings["ida:ClientID"];
-        private static string _appKey = ConfigurationManager.AppSettings["ida:AppKey"] ?? ConfigurationManager.AppSettings["ida:Password"];
-        private static string _tenant = ConfigurationManager.AppSettings["ida:Tenant"];
+        private static string _appKey = ConfigurationManager.AppSettings["ida:ClientSecret"] ?? ConfigurationManager.AppSettings["ida:Password"];
+        private static string _tenant = ConfigurationManager.AppSettings["ida:TenantId"];
 
         private static string _authorizationUri = "https://login.windows.net";
         private static string _graphResourceId = "https://graph.windows.net";
