@@ -1,5 +1,5 @@
 # Office 365 CORS Single Page Application using VisualStudio
-This sample shows how to build a AngularJS Single Page Application using Visual Studio and ADAL for JavaScript to demonstrate the Office 365 CORS support.
+This sample shows how to build a AngularJS Single Page Application using Visual Studio and ADAL for JavaScript to demonstrate the Office 365 CORS support. The sample interacts with the Files API to retrieve the user's files. As Office 365 Discovery Service does not support CORS yet, the sample includes a Web API controller that interacts with the discovery service to obtain the Files API resource Id and service URL.
 
 ADAL for Javascript is an open source library.  For distribution options, source code, and contributions, check out the ADAL JS repo at [https://github.com/AzureAD/azure-activedirectory-library-for-js](https://github.com/AzureAD/azure-activedirectory-library-for-js).
 
@@ -23,12 +23,10 @@ The steps below will describe how to clone Office 365 API web application projec
 6. Double click the project solution which is available under Solutions.
 7. Switch to Solution Explorer.
 
-## Step 2: Build the Project
-1. Simply Build the project to restore NuGet packages.
-2. Ignore any build errors for now as we will configure the project in the next steps.
-
 ## Step 3: Configure the sample
-Once downloaded, open the sample in Visual Studio.
+
+### Build the Project
+Simply Build the project to restore NuGet packages.
 
 ### Register Azure AD application to consume Office 365 APIs
 Office 365 applications use Azure Active Directory (Azure AD) to authenticate and authorize users and applications respectively. All users, application registrations, permissions are stored in Azure AD.
@@ -70,7 +68,7 @@ To get the tenant Id of your Office 365 tenant:
 3. Open the file `App/Scripts/app.js` and locate the line `adalProvider.init(`.
 4. Replace the value of `clientId` with the ClientId from web.config.
 
-## Step 4: Enable the OAuth2 implicit grant for your application
+## Step 5: Enable the OAuth2 implicit grant for your application
 By default, applications provisioned in Azure AD are not enabled to use the OAuth2 implicit grant. In order to run this sample, you need to explicitly opt in.
 
 1. Log in to your Azure Portal and select your Office 365 domain directory.
@@ -80,12 +78,16 @@ By default, applications provisioned in Azure AD are not enabled to use the OAut
 5. Open the manifest file with a text editor. Search for the `oauth2AllowImplicitFlow` property. You will find that it is set to `false`; change it to `true` and save the file.
 6. Using the Manage Manifest button, upload the updated manifest file. Save the configuration of the app.
 
-## Step 5: Run the sample
-Clean the solution, rebuild the solution, and run it. 
+## Step 6: Run the sample
+Clean the solution, rebuild the solution, and run it.
+
+In the **Debug Toolbar**, select to run with **Google Chrome** instead of **Internet Explorer**.
+
+***Note:*** This sample only works on current versions of Chrome and Firefox. A separate patch is required to be installed if you want to try this out in Internet Explorer. Links to the patch will be added soon.
 
 You can trigger the sign in experience by either clicking on the Login link on the top right corner, or by clicking directly on the My Files tab. To see a list of files stored on OneDrive click on the My Files tab. To view the properties of a file or folder, click on the properties link displayed right next to the file name and the properties will be displayed at the bottom of MyFiles list.
 
-## How To Deploy This Sample To Azure Website
+## Step 7: Deploy This Sample To Azure Website
 To deploy this sample application to azure website, we will first create a new website on Azure then import the publish profile
 
 1. Sign in to the [Azure management portal](https://manage.windowsazure.com).
@@ -106,3 +108,16 @@ To deploy this sample application to azure website, we will first create a new w
 16. Click **Publish**.
 
 The sample application will now be published to "[websiteURL].azurewebsites.net".
+
+## Additonal Resources
+
+- [Increasing opportunities for JavaScript developers on the Office 365 platform](http://blogs.office.com/2015/03/06/increasing-opportunities-javascript-developers-office-365-platform/)
+- [Create web apps using CORS to access files in Office 365](https://msdn.microsoft.com/en-us/office/office365/howto/create-web-apps-using-CORS-to-access-files-in-Office-365).
+- [Browse CORS Code Samples](http://dev.office.com/code-samples?filters=AngularJS)
+- Visit the [API Sandbox](https://apisandbox.msdn.microsoft.com/) to gain hands on experience using the browser-based method to execute snippets of code to show how the API works.
+
+As always, we are listening on all the channels and we encourage you to participate and provide feedback if any!
+- [UserVoice](http://aka.ms/OfficeDevFeedback)
+- [Yammer](http://aka.ms/Office365DevApisYam)
+- [StackOverflow](http://aka.ms/AskOffice365Dev)
+- [Twitter](http://www.twitter.com/OfficeDev)
