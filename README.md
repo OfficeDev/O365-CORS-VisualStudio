@@ -111,7 +111,6 @@ The sample application will now be published to "[websiteURL].azurewebsites.net"
 
 ## Additonal Resources
 
-- [Increasing opportunities for JavaScript developers on the Office 365 platform](http://blogs.office.com/2015/03/06/increasing-opportunities-javascript-developers-office-365-platform/)
 - [Create web apps using CORS to access files in Office 365](https://msdn.microsoft.com/en-us/office/office365/howto/create-web-apps-using-CORS-to-access-files-in-Office-365).
 - [Browse CORS Code Samples](http://dev.office.com/code-samples?filters=AngularJS)
 - Visit the [API Sandbox](https://apisandbox.msdn.microsoft.com/) to gain hands on experience using the browser-based method to execute snippets of code to show how the API works.
