@@ -90,22 +90,22 @@ You can trigger the sign in experience by either clicking on the Login link on t
 ## Step 5: Deploy This Sample To Azure Website
 To deploy this sample application to azure website, we will first create a new website on Azure then import the publish profile
 
-1. Sign in to the [Azure management portal](https://manage.windowsazure.com).
-2. In the drawer, click **+New**.
-3. Select **Compute** -> **Website** -> **Quick Create**.
-4. Enter the URL, for example "Office365CORS" and from the web hosting plan either select an existing plan or create a new web hosting plan.
-5. Click **Create Website**.
-6. Once the website is created, select the newly created website and click on **Configure** tab.
-7. Scroll down to **Authentication / Authorization** and click Configure.
-8. On the "Configure Azure Wedsites Authentication / Authorization" dialog, select the **Directory** in which the sample app was registered and from the **AAD Application** drop down list, select "Office365CORS.Office365App (https://localhost:44304/)". Click **OK**.
-9. Once authentication / authorization configuration is completed, click on **Dashboard** tab.
-10. In the quick glance section, click **Download the publish profile** and save it to disk.
-11. Go back to Visual Studio, right click on "Office365CORS" project node in solution explorer and select **Publish**.
-12. Click **Import**.
-13. **Browse** to the publish profile that we saved to disk and click **OK**.
-14. In Connection tab, make sure that **Publish method** is "Web Deploy". Click **Next**.
-15. In Settings tab, **un-check** the **Enable Organizational Authentication** checkbox to disable it.
-16. Click **Publish**.
+1. Right Click on **Office365CORS** project node in Solution Explorer.
+2. Select **Publish**.
+3. On the Publish Web wizard, select **Microsoft Azure Websites**.
+4. Sign into your azure subscription if your are not currently signed in.
+5. On the "Select Existing Website" dialog, click **New...**.
+6. Enter a **site name**, for example "Office365CORS".
+7. Select a **Region**.
+8. Let **Database server** be set to "No database".
+9. Click **Create**.
+10. In Connection tab, make sure that **Publish method** is "Web Deploy". Click **Next**.
+11. In Settings tab, **un-check** the **Enable Organizational Authentication** checkbox to disable it.
+12. Click **Publish**.
+13. Sign in to the [Azure management portal](https://manage.windowsazure.com).
+14. Select the newly created website and click on **Configure** tab.
+15. Scroll down to **Authentication / Authorization** and click Configure.
+16. On the "Configure Azure Wedsites Authentication / Authorization" dialog, select the **Directory** in which the sample app was registered and from the **AAD Application** drop down list, select "Office365CORS.Office365App (https://localhost:44304/)". Click **OK**.
 
 The sample application will now be published to "[websiteURL].azurewebsites.net".
 
