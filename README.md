@@ -101,6 +101,7 @@ To deploy this sample application to azure website, we will first create a new w
 9. Click **Create**.
 10. In Connection tab, make sure that **Publish method** is "Web Deploy". Click **Next**.
 11. In Settings tab, **un-check** the **Enable Organizational Authentication** checkbox to disable it.
+ - NOTE: **Check** this option if you are deploying your Azure AD application to a different domain than the one used to build your web application. In this sample, we are deploying to the same domain for testing.
 12. Click **Publish**.
 13. Sign in to the [Azure management portal](https://manage.windowsazure.com).
 14. Select the newly created website and click on **Configure** tab.
