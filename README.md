@@ -121,3 +121,6 @@ As always, we are listening on all the channels and we encourage you to particip
 - [Yammer](http://aka.ms/Office365DevApisYam)
 - [StackOverflow](http://aka.ms/AskOffice365Dev)
 - [Twitter](http://www.twitter.com/OfficeDev)
+
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
