@@ -1,3 +1,14 @@
+---
+topic: sample
+products:
+- Office 365
+- OneDrive
+languages:
+- JavaScript
+extensions:
+  contentType: samples
+  createdDate: 2/25/2015 2:56:40 PM
+---
 # Office 365 CORS Single Page Application using VisualStudio
 This sample shows how to build a AngularJS Single Page Application using Visual Studio and ADAL for JavaScript to demonstrate the Office 365 CORS support. The sample interacts with the Files API to retrieve the user's files. As Office 365 Discovery Service does not support CORS yet, the sample includes a Web API controller that interacts with the discovery service to obtain the Files API resource Id and service URL.
 
