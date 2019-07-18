@@ -1,10 +1,10 @@
 ---
 topic: sample
 products:
-- Office 365
-- OneDrive
+- office-365
+- office-onedrive
 languages:
-- JavaScript
+- javascript
 extensions:
   contentType: samples
   createdDate: 2/25/2015 2:56:40 PM
