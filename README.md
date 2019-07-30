@@ -1,15 +1,6 @@
----
-page_type: sample
-products:
-- office-365
-- office-onedrive
-languages:
-- javascript
-extensions:
-  contentType: samples
-  createdDate: 2/25/2015 2:56:40 PM
----
-# Office 365 CORS Single Page Application using VisualStudio
+# [ARCHIVED] Office 365 CORS Single Page Application using VisualStudio
+**Note:** This repo is archived and no longer actively maintained. Security vulnerabilities may exist in the project, or its dependencies. If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Do not use this project as the starting point of a production Office Add-in. Always start your production code by using the Office/SharePoint development workload in Visual Studio, or the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office), and follow security best practices as you develop the add-in.
+
 This sample shows how to build a AngularJS Single Page Application using Visual Studio and ADAL for JavaScript to demonstrate the Office 365 CORS support. The sample interacts with the Files API to retrieve the user's files. As Office 365 Discovery Service does not support CORS yet, the sample includes a Web API controller that interacts with the discovery service to obtain the Files API resource Id and service URL.
 
 ADAL for Javascript is an open source library.  For distribution options, source code, and contributions, check out the ADAL JS repo at [https://github.com/AzureAD/azure-activedirectory-library-for-js](https://github.com/AzureAD/azure-activedirectory-library-for-js).
